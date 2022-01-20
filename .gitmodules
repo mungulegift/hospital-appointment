@@ -1,0 +1,3 @@
+[submodule "react"]
+  path = src/main/webapp/WEB-INF/view/react
+  url = http://github.com/mungulegift/hospital-appointment-app.git

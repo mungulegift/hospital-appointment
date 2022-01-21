@@ -3,7 +3,10 @@ package com.hospital.appointment.model;
 import java.util.*;
  
 import javax.persistence.*;
- 
+
+/**
+* An Entity which will store user's credentials
+* */
 @Entity
 @Table(name = "users")
 public class UserEntity {

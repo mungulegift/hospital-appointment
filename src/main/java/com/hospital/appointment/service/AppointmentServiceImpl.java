@@ -15,6 +15,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+
+/**
+ * This is a service that handles the implementation of
+ * 1: create appointment
+ * 2: get appointment
+ * 3: assign appointment
+ * */
 @Service
 @RequiredArgsConstructor
 public class AppointmentServiceImpl implements AppointmentService{

@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
+/**
+* This handles the entry point for authentication
+* */
 @Component
 public class RestAuthEntryPoint implements AuthenticationEntryPoint {
 

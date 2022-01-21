@@ -15,12 +15,21 @@ import org.springframework.web.server.ResponseStatusException;
 import java.security.Principal;
 import java.util.List;
 
+
+/**
+* Class to handle user creation and user management apis
+* */
 @RestController
 @RequestMapping("api/user/")
 @RequiredArgsConstructor
 public class UserController {
 
     private final AddUserService addUserService;
+
+ /**
+ * Start: api for patient sign up
+  * @param userDto
+ * */
 
     @PostMapping("patient/add")
     public UserEntity addPatient(@RequestBody UserDTO userDto) {
@@ -31,14 +40,28 @@ public class UserController {
 
         return  addUserService.addUser(userDto);
     }
+/**
+* End: api for patient sign up
+* */
 
+
+/**
+* Start: api for adding a doctor/provider by admin
+ * @param userDto
+* */
     @PostMapping("provider/add")
     @PreAuthorize("hasRole('ADMIN')")
     public UserEntity addProvider(@RequestBody UserDTO userDto) {
 
         return  addUserService.addUser(userDto);
     }
+/**
+* End: api for adding a doctor/provider by admin
+* */
 
+/**
+* Start: api to retrieve all doctors/providers by admin
+* */
     @GetMapping("provider/all")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<List<ProviderEntity>> getProvider() {
@@ -46,7 +69,14 @@ public class UserController {
         List<ProviderEntity> providers = addUserService.getProviders();
         return ResponseEntity.ok().body(providers);
     }
+/**
+ * End: api to retrieve all doctors/providers by admin
+ * */
 
+/**
+*Start: api to get the current logged user
+ * @param principal
+* */
     @GetMapping("name")
     @PreAuthorize("hasAnyRole('PATIENT','PROVIDER','ADMIN')")
     public ResponseEntity<UserDTO> currentUserName(Principal principal) {
@@ -60,4 +90,12 @@ public class UserController {
         }
     }
 
+/**
+* End: api to get the current logged user
+* */
+
 }
+
+/**
+* End of class
+* */

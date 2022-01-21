@@ -2,6 +2,9 @@ package com.hospital.appointment.model;
 
 import javax.persistence.*;
 
+/**
+* An Entity which will store user's roles
+* */
 @Entity
 @Table(name = "roles")
 public class RoleEntity {

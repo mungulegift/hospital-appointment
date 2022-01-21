@@ -7,6 +7,9 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+/**
+* An entity which will be used to store appointment schedules submitted by patients
+* */
 @Entity
 @Table(name = "appointment")
 @Data

@@ -4,6 +4,10 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+
+/**
+* An Entity which will be used to store patient's data
+* */
 @Entity
 @Data
 @Table(name = "patient")

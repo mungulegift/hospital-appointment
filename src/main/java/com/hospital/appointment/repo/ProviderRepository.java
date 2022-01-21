@@ -9,9 +9,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface ProviderRepository extends CrudRepository<ProviderEntity, Long> {
- 
-//    @Query("SELECT u FROM UserEntity u WHERE u.username = :username")
-//    public UserEntity getUserByUsername(@Param("username") String username);
 
     List<ProviderEntity> findAll();
     ProviderEntity findByUserEntity(UserEntity userEntity);

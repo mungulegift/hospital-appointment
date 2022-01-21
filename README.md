@@ -9,3 +9,4 @@
 6. Run command `mvn compile`
 7. If you are using an IDE, run project with start button or run command `mvn spring-boot:run`
 6. Go to http://localhost:8080/
+7. To login as admin, use username `admin` and password `admin`
